@@ -11,7 +11,7 @@ CORS(app)
 
 # ── API KEYS ──────────────────────────────────────────────────
 DATA_GOV_API_KEY  = 'YOUR_DATA_GOV_API_KEY_HERE'
-PLANTNET_API_KEY  = '2b10eVax8cog1DDsfJwcFcGqlu'  # ← paste your PlantNet key here
+PLANTNET_API_KEY  = ''  # ← paste your PlantNet key here
 
 # ── CROP NAME MAPPING ─────────────────────────────────────────
 CROP_MAP = {
