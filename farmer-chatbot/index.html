@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmer Assistant — AI for Indian Agriculture</title>
+  <meta name="description" content="AI-powered farming assistant for 140M Indian farmers. Live weather, market prices, crop disease detection and advice in English, Hindi and Telugu."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="src/css/style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════
+     SPLASH SCREEN
+════════════════════════════════════════════════════ -->
+<div id="splashScreen" class="splash">
+  <div class="splash-bg"></div>
+  <div class="splash-inner">
+
+    <!-- Nav -->
+    <nav class="splash-nav">
+      <div class="splash-brand">
+        <div class="splash-brand-icon">🌾</div>
+        <span class="splash-brand-name">Farmer Assistant</span>
+      </div>
+      <span class="splash-badge">AI-Powered · Free</span>
+    </nav>
+
+    <!-- Hero -->
+    <section class="splash-hero">
+      <div class="splash-eyebrow">India's most advanced farming AI</div>
+      <h1 class="splash-title">
+        Grow smarter.<br>
+        Earn <span class="splash-title-accent">more.</span>
+      </h1>
+      <p class="splash-subtitle">
+        Real-time weather · Live mandi prices · AI disease detection · Voice in your language. Completely free for every farmer.
+      </p>
+    </section>
+
+    <!-- Stats -->
+    <div class="splash-stats">
+      <div class="splash-stat">
+        <span class="splash-stat-num" data-target="3">0</span>
+        <span class="splash-stat-label">Languages</span>
+      </div>
+      <div class="splash-stat-divider"></div>
+      <div class="splash-stat">
+        <span class="splash-stat-num" data-target="20">0</span>
+        <span class="splash-stat-label">Crops covered</span>
+      </div>
+      <div class="splash-stat-divider"></div>
+      <div class="splash-stat">
+        <span class="splash-stat-num" data-target="548">0</span>
+        <span class="splash-stat-label">Diseases detected</span>
+      </div>
+      <div class="splash-stat-divider"></div>
+      <div class="splash-stat">
+        <span class="splash-stat-num" data-target="15">0</span>
+        <span class="splash-stat-label">Districts served</span>
+      </div>
+      <div class="splash-stat-divider"></div>
+      <div class="splash-stat">
+        <span class="splash-stat-num" data-target="24">0</span>
+        <span class="splash-stat-label">×7 Available</span>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="splash-features">
+      <div class="splash-feature">
+        <span class="splash-feature-icon">🌦</span>
+        <p class="splash-feature-name">Live Weather</p>
+        <p class="splash-feature-desc">Farming advice tailored to today's conditions</p>
+      </div>
+      <div class="splash-feature">
+        <span class="splash-feature-icon">💰</span>
+        <p class="splash-feature-name">Mandi Prices</p>
+        <p class="splash-feature-desc">Live rates + Government MSP for 20+ crops</p>
+      </div>
+      <div class="splash-feature">
+        <span class="splash-feature-icon">🔬</span>
+        <p class="splash-feature-name">Disease Scanner</p>
+        <p class="splash-feature-desc">Upload a photo · AI diagnosis in seconds</p>
+      </div>
+      <div class="splash-feature">
+        <span class="splash-feature-icon">🌱</span>
+        <p class="splash-feature-name">Crop Wizard</p>
+        <p class="splash-feature-desc">Smart crop picks based on your land and goals</p>
+      </div>
+      <div class="splash-feature">
+        <span class="splash-feature-icon">🎤</span>
+        <p class="splash-feature-name">Voice Input</p>
+        <p class="splash-feature-desc">Speak in English, Hindi or Telugu naturally</p>
+      </div>
+    </div>
+
+    <!-- Stories -->
+    <div class="splash-stories">
+      <p class="splash-section-label">Farmer stories</p>
+      <div class="splash-stories-grid">
+        <div class="splash-story">
+          <div class="splash-story-avatar" style="background:#1a5c34">RK</div>
+          <div>
+            <p class="splash-story-name">Ramaiah K. <span class="splash-story-loc">· Warangal</span></p>
+            <p class="splash-story-quote">"Checked mandi prices before selling. Got ₹2,400 instead of ₹1,900 per quintal — saved ₹8,000 on one harvest."</p>
+            <p class="splash-story-tag">🌾 Paddy · 4 acres</p>
+          </div>
+        </div>
+        <div class="splash-story">
+          <div class="splash-story-avatar" style="background:#1565c0">PD</div>
+          <div>
+            <p class="splash-story-name">Padmavathi D. <span class="splash-story-loc">· Nizamabad</span></p>
+            <p class="splash-story-quote">"Disease scanner spotted yellow mosaic on my soybean instantly. Treated early and saved the entire crop."</p>
+            <p class="splash-story-tag">🫘 Soybean · 6 acres</p>
+          </div>
+        </div>
+        <div class="splash-story">
+          <div class="splash-story-avatar" style="background:#b34700">SK</div>
+          <div>
+            <p class="splash-story-name">Suresh K. <span class="splash-story-loc">· Karimnagar</span></p>
+            <p class="splash-story-quote">"Crop wizard recommended cotton. Earned ₹1.2 lakh this kharif — 40% more than the previous year."</p>
+            <p class="splash-story-tag">🌿 Cotton · 8 acres</p>
+          </div>
+        </div>
+        <div class="splash-story">
+          <div class="splash-story-avatar" style="background:#5b1a9a">LB</div>
+          <div>
+            <p class="splash-story-name">Lakshmi B. <span class="splash-story-loc">· Khammam</span></p>
+            <p class="splash-story-quote">"Voice input in Telugu told me to delay spraying due to rain. Saved pesticides worth ₹3,500."</p>
+            <p class="splash-story-tag">🍅 Tomato · 3 acres</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Language + CTA -->
+    <div class="splash-bottom">
+      <p class="splash-section-label">Choose your language</p>
+      <div class="splash-lang-row">
+        <button class="splash-lang-btn active" onclick="setSplashLang('en',this)">🇮🇳 English</button>
+        <button class="splash-lang-btn" onclick="setSplashLang('hi',this)">हिंदी</button>
+        <button class="splash-lang-btn" onclick="setSplashLang('te',this)">తెలుగు</button>
+      </div>
+      <button class="splash-cta" onclick="enterApp()">
+        Start farming smarter
+        <span class="splash-cta-arrow">→</span>
+      </button>
+      <p class="splash-footnote">Free forever · No sign-up · Works in your browser</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     MAIN APP
+════════════════════════════════════════════════════ -->
+<div id="mainApp" class="app-hidden" style="display:flex;flex-direction:column;height:100vh;overflow:hidden;">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-logo-box">🌾</div>
+      <div>
+        <p class="header-title">Farmer Assistant</p>
+        <p class="header-subtitle">AI-powered farming guide</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="dark-toggle" id="darkToggle" onclick="toggleDarkMode()" title="Toggle dark mode">🌙</button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" onclick="setLanguage('hi')">हिं</button>
+        <button class="lang-btn" onclick="setLanguage('te')">తె</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ticker -->
+  <div class="stats-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>🌍</span> 3 Languages</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🌾</span> 20+ Crops</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>📍</span> 15 Districts</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🌦</span> Live Weather</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🔬</span> AI Disease Scanner</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🎤</span> Voice Assistant</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>💰</span> Live Mandi Prices</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🪴</span> Soil Calculator</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🌍</span> 3 Languages</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🌾</span> 20+ Crops</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>📍</span> 15 Districts</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🌦</span> Live Weather</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🔬</span> AI Disease Scanner</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🎤</span> Voice Assistant</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>💰</span> Live Mandi Prices</span><span class="ticker-dot">·</span>
+      <span class="ticker-item"><span>🪴</span> Soil Calculator</span>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <main class="chat-container">
+    <div class="chat-window" id="chatWindow">
+      <div class="message bot-message">
+        <div class="bot-avatar-wrap">🌾</div>
+        <div>
+          <div class="message-bubble" id="welcomeMsg">
+            Hello Farmer! 👋 I'm your AI farming assistant. Ask me about weather, crop advice, live mandi prices, or upload a crop photo to detect diseases. How can I help you today?
+          </div>
+          <div class="message-meta">
+            <span class="message-time">Just now</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick replies -->
+    <div class="quick-replies" id="quickReplies">
+      <button class="quick-btn" onclick="sendQuick('weather')">🌦 Weather</button>
+      <button class="quick-btn" onclick="sendQuick('crop')">🌱 Crop Advice</button>
+      <button class="quick-btn" onclick="sendQuick('market')">💰 Market Price</button>
+      <button class="quick-btn" onclick="sendQuick('pest')">🐛 Pest Control</button>
+      <button class="quick-btn upload-trigger-btn" onclick="document.getElementById('cropImageInput').click()">📷 Scan Crop</button>
+      <button class="quick-btn soil-btn" onclick="toggleSoilCalculator()">🪴 Soil Health</button>
+    </div>
+
+    <!-- Disease Scanner -->
+    <div class="scan-panel" id="scanPanel">
+      <div class="scan-panel-header">
+        <div class="scan-icon-wrap">🔬</div>
+        <div>
+          <p class="scan-title" id="scanTitle">Crop Disease Scanner</p>
+          <p class="scan-subtitle" id="scanSubtitle">Upload a photo · AI diagnosis in seconds</p>
+        </div>
+        <button class="scan-close-btn" onclick="closeScanPanel()">✕</button>
+      </div>
+      <div class="drop-zone" id="dropZone"
+           ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
+           ondrop="handleDrop(event)" onclick="document.getElementById('cropImageInput').click()">
+        <div class="drop-zone-content" id="dropZoneContent">
+          <span class="drop-icon">📷</span>
+          <p class="drop-text" id="dropText">Tap to upload or drag & drop</p>
+          <p class="drop-hint" id="dropHint">JPG or PNG · Max 5MB · Close-up of leaf works best</p>
+        </div>
+        <img id="previewImage" class="preview-image" src="" alt="Preview" style="display:none"/>
+      </div>
+      <input type="file" id="cropImageInput" accept="image/*" style="display:none" onchange="handleImageUpload(event)"/>
+      <div class="scan-actions" id="scanActions" style="display:none">
+        <button class="scan-btn-analyze" id="analyzeBtn" onclick="analyzeCrop()">🔬 Analyze Crop</button>
+        <button class="scan-btn-clear" onclick="clearScan()">✕ Clear</button>
+      </div>
+      <div class="scan-tips" id="scanTips">
+        <p class="scan-tips-title" id="scanTipsTitle">📸 Tips for best results</p>
+        <ul>
+          <li id="tip1">Close-up of the affected leaf or stem</li>
+          <li id="tip2">Good natural lighting — no flash or shadows</li>
+          <li id="tip3">Sharp focus on the most affected area</li>
+          <li id="tip4">Avoid blurry or very dark photos</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Soil Calculator -->
+    <div class="soil-panel" id="soilPanel" style="display:none">
+      <div class="soil-header">
+        <div class="soil-icon-wrap">🪴</div>
+        <div>
+          <p class="soil-title">Soil Health Calculator</p>
+          <p class="soil-subtitle">Enter soil test values for personalised fertiliser advice</p>
+        </div>
+        <button class="scan-close-btn" onclick="toggleSoilCalculator()">✕</button>
+      </div>
+      <div class="soil-inputs">
+        <div class="soil-field">
+          <label>Soil pH <span class="soil-range">(ideal 6–7.5)</span></label>
+          <input type="number" id="soilPH" min="0" max="14" step="0.1" placeholder="e.g. 6.5"/>
+        </div>
+        <div class="soil-field">
+          <label>Nitrogen (N) <span class="soil-range">kg/ha</span></label>
+          <input type="number" id="soilN" min="0" max="600" placeholder="e.g. 180"/>
+        </div>
+        <div class="soil-field">
+          <label>Phosphorus (P) <span class="soil-range">kg/ha</span></label>
+          <input type="number" id="soilP" min="0" max="100" placeholder="e.g. 22"/>
+        </div>
+        <div class="soil-field">
+          <label>Potassium (K) <span class="soil-range">kg/ha</span></label>
+          <input type="number" id="soilK" min="0" max="600" placeholder="e.g. 180"/>
+        </div>
+        <div class="soil-field">
+          <label>Organic Carbon <span class="soil-range">% (optional)</span></label>
+          <input type="number" id="soilOC" min="0" max="5" step="0.1" placeholder="e.g. 0.5"/>
+        </div>
+        <div class="soil-field">
+          <label>Crop to grow</label>
+          <select id="soilCrop">
+            <option value="">Select crop...</option>
+            <option value="paddy">Paddy / Rice</option>
+            <option value="wheat">Wheat</option>
+            <option value="cotton">Cotton</option>
+            <option value="maize">Maize</option>
+            <option value="soybean">Soybean</option>
+            <option value="tomato">Tomato</option>
+            <option value="groundnut">Groundnut</option>
+            <option value="chickpea">Chickpea</option>
+          </select>
+        </div>
+      </div>
+      <button class="soil-analyze-btn" onclick="analyzeSoil()">Get Fertiliser Recommendation →</button>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="chat-toolbar">
+      <span class="chat-date" id="chatDate"></span>
+      <div class="toolbar-actions">
+        <button class="save-report-btn" onclick="saveReport()">📄 Save Report</button>
+        <button class="clear-btn" onclick="clearChat()">🗑 Clear</button>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="input-area">
+      <input type="text" id="userInput" class="chat-input"
+        placeholder="Ask anything about your farm..." onkeypress="handleKey(event)"/>
+      <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="Voice input">🎤</button>
+      <button class="send-btn" onclick="sendMessage()">Send →</button>
+    </div>
+
+    <!-- Voice status -->
+    <div class="voice-status" id="voiceStatus" style="display:none">
+      <span class="voice-pulse"></span>
+      <span id="voiceStatusText">Listening...</span>
+      <button class="voice-stop-btn" onclick="stopVoice()">Stop</button>
+    </div>
+  </main>
+</div>
+
+<!-- Scripts -->
+<script src="src/js/translate.js"></script>
+<script src="src/js/weather.js"></script>
+<script src="src/js/chatbot.js"></script>
+<script src="src/js/disease.js"></script>
+
+<script>
+  // ── SPLASH LANG ──
+  let splashLang = 'en';
+  function setSplashLang(lang, btn) {
+    splashLang = lang;
+    document.querySelectorAll('.splash-lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const labels = { en: 'Start farming smarter →', hi: 'चैट शुरू करें →', te: 'ప్రారంభించండి →' };
+    document.querySelector('.splash-cta').innerHTML = labels[lang] + '<span class="splash-cta-arrow" style="display:none"></span>';
+  }
+
+  // ── ENTER APP ──
+  async function enterApp() {
+    const splash = document.getElementById('splashScreen');
+    const app    = document.getElementById('mainApp');
+    splash.classList.add('splash-exit');
+    setTimeout(() => {
+      splash.style.display = 'none';
+      app.classList.remove('app-hidden');
+      app.classList.add('app-enter');
+      if (splashLang !== 'en') {
+        const btns = document.querySelectorAll('.lang-btn');
+        btns.forEach(b => b.classList.remove('active'));
+        const map = { en:0, hi:1, te:2 };
+        btns[map[splashLang]]?.classList.add('active');
+        loadResponses(splashLang).then(() => updateUILanguage(splashLang));
+        currentLanguage = splashLang;
+      }
+    }, 600);
+  }
+
+  // ── STATS COUNTER ──
+  function animateCounters() {
+    document.querySelectorAll('.splash-stat-num').forEach(el => {
+      const target = parseInt(el.dataset.target);
+      let current = 0;
+      const duration = 1200;
+      const steps = 50;
+      const increment = target / steps;
+      let step = 0;
+      const timer = setInterval(() => {
+        step++;
+        current = Math.min(Math.round(increment * step), target);
+        el.textContent = current;
+        if (step >= steps) clearInterval(timer);
+      }, duration / steps);
+    });
+  }
+  setTimeout(animateCounters, 300);
+
+  // ── DARK MODE ──
+  function toggleDarkMode() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    document.getElementById('darkToggle').textContent = isDark ? '🌙' : '☀️';
+    localStorage.setItem('fa-theme', isDark ? 'light' : 'dark');
+  }
+  const savedTheme = localStorage.getItem('fa-theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('darkToggle');
+      if (btn) btn.textContent = '☀️';
+    });
+  }
+
+  // ── SOIL CALCULATOR ──
+  function toggleSoilCalculator() {
+    const panel = document.getElementById('soilPanel');
+    const isVisible = panel.style.display !== 'none';
+    panel.style.display = isVisible ? 'none' : 'block';
+    if (!isVisible) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function analyzeSoil() {
+    const ph   = parseFloat(document.getElementById('soilPH').value);
+    const n    = parseFloat(document.getElementById('soilN').value);
+    const p    = parseFloat(document.getElementById('soilP').value);
+    const k    = parseFloat(document.getElementById('soilK').value);
+    const oc   = parseFloat(document.getElementById('soilOC').value) || 0;
+    const crop = document.getElementById('soilCrop').value;
+    if (!ph || !n || !p || !k || !crop) { alert('Please fill in all required fields (pH, N, P, K and crop).'); return; }
+    toggleSoilCalculator();
+    addMessage(buildSoilReport(ph, n, p, k, oc, crop, currentLanguage), 'bot');
+  }
+
+  function buildSoilReport(ph, n, p, k, oc, crop, lang) {
+    const issues = [], recs = [];
+    if (ph < 5.5)       { issues.push('🔴 Soil very acidic (pH '+ph+')');       recs.push('Apply lime 2–3 tonnes/ha'); }
+    else if (ph < 6.0)  { issues.push('🟡 Soil slightly acidic (pH '+ph+')');   recs.push('Apply lime 1–1.5 tonnes/ha'); }
+    else if (ph > 8.5)  { issues.push('🔴 Soil very alkaline (pH '+ph+')');     recs.push('Apply gypsum 2 tonnes/ha'); }
+    else if (ph > 7.5)  { issues.push('🟡 Soil slightly alkaline (pH '+ph+')'); recs.push('Apply sulphur 500 kg/ha'); }
+    else                { issues.push('✅ pH ideal ('+ph+')'); }
+    if (n < 140)        { issues.push('🔴 Nitrogen LOW ('+n+' kg/ha)');      recs.push('Urea @ 65 kg/ha basal'); }
+    else if (n < 280)   { issues.push('🟡 Nitrogen MEDIUM ('+n+' kg/ha)');   recs.push('Urea @ 35 kg/ha basal'); }
+    else                { issues.push('✅ Nitrogen sufficient'); }
+    if (p < 10)         { issues.push('🔴 Phosphorus LOW ('+p+' kg/ha)');    recs.push('DAP @ 100 kg/ha basal'); }
+    else if (p < 25)    { issues.push('🟡 Phosphorus MEDIUM ('+p+' kg/ha)'); recs.push('DAP @ 50 kg/ha basal'); }
+    else                { issues.push('✅ Phosphorus sufficient'); }
+    if (k < 110)        { issues.push('🔴 Potassium LOW ('+k+' kg/ha)');     recs.push('MOP @ 83 kg/ha basal'); }
+    else if (k < 280)   { issues.push('🟡 Potassium MEDIUM ('+k+' kg/ha)');  recs.push('MOP @ 42 kg/ha basal'); }
+    else                { issues.push('✅ Potassium sufficient'); }
+    if (oc > 0 && oc < 0.5)  { issues.push('🔴 Organic Carbon very LOW ('+oc+'%)'); recs.push('Add compost 10 tonnes/ha'); }
+    else if (oc > 0 && oc < 0.75) { issues.push('🟡 Organic Carbon LOW ('+oc+'%)'); recs.push('Add compost 5 tonnes/ha'); }
+    const cropTips = { paddy:'Apply Zinc Sulphate 25 kg/ha.', wheat:'Split nitrogen: 50% basal, 25% crown root, 25% tillering.', cotton:'Boron 1 kg/ha foliar at flowering.', maize:'Nitrogen in 3 splits.', soybean:'Rhizobium seed treatment.', tomato:'Calcium Nitrate foliar 5g/L.', groundnut:'Gypsum 500 kg/ha at pegging.', chickpea:'Use Rhizobium — skip nitrogen.' };
+    const cropName = crop.charAt(0).toUpperCase()+crop.slice(1);
+    return `🪴 Soil Report — ${cropName}\n${'─'.repeat(32)}\n\n📊 Status:\n${issues.join('\n')}\n\n`+(recs.length?`💊 Recommendations:\n• ${recs.join('\n• ')}\n\n`:'')+`🌾 ${cropName} tip: ${cropTips[crop]||''}\n\n⚠️ Visit your nearest KVK for precise soil testing.`;
+  }
+
+  // ── SAVE PDF ──
+  function saveReport() {
+    const { jsPDF } = window.jspdf;
+    if (!jsPDF) { alert('PDF library loading. Please try again.'); return; }
+    const doc = new jsPDF();
+    doc.setFillColor(10, 61, 31);
+    doc.rect(0, 0, 210, 28, 'F');
+    doc.setTextColor(255,255,255);
+    doc.setFontSize(16); doc.setFont('helvetica','bold');
+    doc.text('Farmer Assistant — Chat Report', 14, 16);
+    doc.setFontSize(9); doc.setFont('helvetica','normal');
+    doc.text('Generated: ' + new Date().toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'}), 14, 24);
+    let y = 38;
+    document.querySelectorAll('.message').forEach(msg => {
+      const isBot = msg.classList.contains('bot-message');
+      const bubble = msg.querySelector('.message-bubble');
+      const time = msg.querySelector('.message-time');
+      if (!bubble) return;
+      const text = bubble.innerText || '';
+      const ts = time ? time.textContent : '';
+      doc.setFontSize(8); doc.setFont('helvetica','bold');
+      doc.setTextColor(isBot?10:80, isBot?61:80, isBot?31:80);
+      doc.text((isBot?'🌾 Assistant':'👨‍🌾 Farmer') + (ts ? '  '+ts : ''), 14, y);
+      y += 5;
+      doc.setFont('helvetica','normal'); doc.setFontSize(9.5); doc.setTextColor(30,30,30);
+      doc.splitTextToSize(text.replace(/\n+/g,' '), 182).forEach(line => {
+        if (y > 272) { doc.addPage(); y = 20; }
+        doc.text(line, 14, y); y += 4.5;
+      });
+      doc.setDrawColor(220,230,220); doc.line(14, y+2, 196, y+2); y += 8;
+    });
+    doc.setFontSize(7); doc.setTextColor(160,160,160);
+    doc.text('Farmer Assistant · AI-powered farming guide · Free for all Indian farmers', 14, 287);
+    doc.save('farmer-assistant-report.pdf');
+  }
+</script>
+
+</body>
+</html>

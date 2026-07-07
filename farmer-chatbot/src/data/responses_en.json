@@ -1,0 +1,298 @@
+{
+  "weather": {
+    "keywords": ["rain", "weather", "temperature", "forecast", "humidity", "climate", "wind", "storm", "sunny", "cloud", "hot", "cold", "drought", "flood", "monsoon"],
+    "rules": [
+      {
+        "triggers": ["rain", "raining", "rainfall", "monsoon"],
+        "response": "🌧 Rainfall tip: Avoid applying fertilizers or pesticides just before rain — they will wash away. Wait 24 hours after rain before spraying. Heavy rainfall? Ensure your field has proper drainage to avoid waterlogging."
+      },
+      {
+        "triggers": ["hot", "heat", "temperature", "sunny", "summer"],
+        "response": "☀️ In hot weather: Water your crops early morning (5–8 AM) or evening (6–8 PM) to reduce evaporation. Mulching around plants helps retain soil moisture. Avoid working in fields between 12 PM – 3 PM."
+      },
+      {
+        "triggers": ["cold", "winter", "frost", "fog"],
+        "response": "🌨 Cold weather alert: Cover young seedlings with cloth or plastic sheets during frost nights. Irrigate fields before a cold night — wet soil retains heat better. Avoid sowing heat-loving crops like cotton in winter."
+      },
+      {
+        "triggers": ["drought", "no rain", "dry", "water shortage"],
+        "response": "🏜 Drought management: Switch to drip irrigation to save up to 50% water. Grow drought-resistant crops like jowar, bajra, or pulses. Mulch your soil to reduce evaporation. Check with your district office for government drought relief schemes."
+      },
+      {
+        "triggers": ["flood", "waterlogging", "excess water", "flooded"],
+        "response": "🌊 Flood/waterlogging: Immediately create drainage channels to remove excess water. Do not apply fertilizers in waterlogged fields. After water recedes, spray fungicide to prevent root rot. Report crop damage to your local agriculture office for compensation."
+      },
+      {
+        "triggers": ["forecast", "humidity", "wind", "storm", "cloud"],
+        "response": "🌦 For accurate daily weather forecasts for your district, visit: meghdoot.imd.gov.in (India Met Dept) or check the Kisan app. You can also SMS WEATHER district-name to 51969 for a free forecast."
+      }
+    ],
+    "responses": [
+      "🌦 For accurate weather info, visit meghdoot.imd.gov.in or use the Kisan app on your phone.",
+      "🌧 Good practice: always check weather before spraying pesticides or fertilizers.",
+      "☀️ Water your crops early morning or evening — never during peak afternoon heat."
+    ]
+  },
+
+  "crop": {
+    "keywords": ["crop", "grow", "plant", "soil", "season", "sow", "harvest", "seed", "field", "farm", "cultivate", "yield", "paddy", "wheat", "rice", "maize", "cotton", "sugarcane", "vegetable", "pulse", "dal", "groundnut", "soybean", "bajra", "jowar", "sunflower", "tomato", "onion", "potato"],
+    "rules": [
+      {
+        "triggers": ["paddy", "rice"],
+        "response": "🌾 Paddy/Rice cultivation tips:\n• Best season: Kharif (June–November)\n• Water requirement: 1200–1500mm\n• Sow seeds in nursery first, transplant after 25–30 days\n• Apply basal fertilizer (NPK 60:30:30 kg/ha) at transplanting\n• Watch for brown planthopper and blast disease\n• Harvest when 80% grains turn golden yellow"
+      },
+      {
+        "triggers": ["wheat"],
+        "response": "🌾 Wheat cultivation tips:\n• Best season: Rabi (November–March)\n• Sow seeds at 100–125 kg/ha depth of 5–6cm\n• First irrigation: 20–25 days after sowing (crown root stage)\n• Apply nitrogen in 2 splits: at sowing and at first irrigation\n• Watch for yellow rust and aphids\n• Harvest when crop turns golden and moisture is below 14%"
+      },
+      {
+        "triggers": ["cotton"],
+        "response": "🌿 Cotton cultivation tips:\n• Best season: Kharif (April–May sowing)\n• Use Bt cotton seeds for bollworm resistance\n• Spacing: 90x60cm for irrigated, 90x45cm for rainfed\n• Apply potassium to improve fiber quality\n• Monitor for pink bollworm and whitefly regularly\n• Pick cotton every 8–10 days once bolls open"
+      },
+      {
+        "triggers": ["tomato"],
+        "response": "🍅 Tomato cultivation tips:\n• Can be grown year-round; best in Oct–Nov and Jan–Feb\n• Prepare nursery, transplant 25–30 day old seedlings\n• Spacing: 60x45cm\n• Stake plants when they reach 30cm height\n• Water regularly but avoid waterlogging\n• Watch for early blight, late blight, and fruit borer"
+      },
+      {
+        "triggers": ["onion"],
+        "response": "🧅 Onion cultivation tips:\n• Kharif sowing: June–July | Rabi sowing: Oct–Nov\n• Transplant 6–8 week old seedlings\n• Avoid excess nitrogen — causes poor bulb formation\n• Stop irrigation 10 days before harvest\n• Cure bulbs in shade for 7–10 days before storage\n• Store in well-ventilated shade to avoid rotting"
+      },
+      {
+        "triggers": ["potato"],
+        "response": "🥔 Potato cultivation tips:\n• Best season: Rabi (Oct–Nov planting)\n• Use certified seed tubers, cut into 40–50g pieces\n• Plant at 60x20cm spacing, 5–7cm deep\n• Earth up plants when 15–20cm tall\n• Apply fertilizer NPK 180:80:100 kg/ha\n• Harvest when tops turn yellow and die naturally"
+      },
+      {
+        "triggers": ["maize", "corn"],
+        "response": "🌽 Maize cultivation tips:\n• Kharif: June–July | Rabi: Oct–Nov\n• Seed rate: 20–25 kg/ha at 60x20cm spacing\n• Highly responsive to nitrogen — apply in 3 splits\n• Needs good drainage — avoid waterlogged fields\n• Watch for fall armyworm — a major pest recently\n• Harvest when husks turn brown and kernels are hard"
+      },
+      {
+        "triggers": ["soybean", "soya"],
+        "response": "🫘 Soybean cultivation tips:\n• Best season: Kharif (June–July)\n• Seed rate: 70–80 kg/ha at 45x5cm spacing\n• Treat seeds with Rhizobium culture before sowing\n• Do not apply nitrogen fertilizer — soybean fixes its own\n• Watch for girdle beetle and leaf eating caterpillars\n• Harvest when 95% pods turn brown"
+      },
+      {
+        "triggers": ["kharif", "june", "july", "monsoon season"],
+        "response": "☔ Kharif season crops (June–October):\n• Cereals: Paddy, Maize, Bajra, Jowar\n• Oilseeds: Groundnut, Soybean, Sunflower\n• Pulses: Moong, Urad, Arhar (Tur)\n• Cash crops: Cotton, Sugarcane, Jute\nSow after first good monsoon rain when soil has good moisture."
+      },
+      {
+        "triggers": ["rabi", "november", "december", "winter crop"],
+        "response": "❄️ Rabi season crops (November–March):\n• Cereals: Wheat, Barley\n• Oilseeds: Mustard, Linseed, Sunflower\n• Pulses: Chickpea, Peas, Lentil\n• Vegetables: Potato, Onion, Tomato, Cauliflower\nSow after monsoon retreat when temperatures drop below 25°C."
+      },
+      {
+        "triggers": ["soil", "soil test", "ph", "fertility", "compost", "organic"],
+        "response": "🪴 Soil health tips:\n• Test soil every 2–3 years at your nearest KVK or soil testing lab\n• Ideal pH for most crops: 6.0–7.5\n• Add farm yard manure (FYM) 10–15 tonnes/ha to improve organic matter\n• Practice crop rotation to maintain fertility\n• Avoid burning crop residues — incorporate them into soil instead\n• Apply lime if soil is too acidic (pH below 5.5)"
+      },
+      {
+        "triggers": ["seed", "seeds", "variety", "which seed"],
+        "response": "🌱 Seed selection tips:\n• Always buy certified seeds from government outlets or reputed companies\n• Check for germination date — seeds older than 1 year may have poor germination\n• Treat seeds with fungicide (Thiram/Captan) before sowing\n• For Telangana: contact TSSEED or local agriculture department for state-recommended varieties\n• Hybrid seeds give higher yield but must be purchased every season"
+      }
+    ],
+    "responses": [
+      "🌱 For Kharif season (June–Oct): Paddy, Maize, Cotton, Soybean are ideal crops for Telangana.",
+      "🌾 For Rabi season (Nov–Mar): Wheat, Mustard, Chickpea work well in most regions.",
+      "🪴 Always test your soil before deciding which crop to grow. Visit your nearest KVK for a free soil test.",
+      "💡 Rotate crops every season to maintain soil health and reduce pest buildup."
+    ]
+  },
+
+  "market": {
+    "keywords": ["price", "market", "sell", "rate", "mandi", "cost", "buyer", "trade", "profit", "income", "money", "msp", "minimum support", "agmarknet", "wholesale", "retail", "today price", "live price", "current price", "bhav", "daam", "market rate", "crop price", "vegetable price", "grain price"],
+    "rules": [
+      {
+        "triggers": ["paddy price", "rice price", "paddy rate", "rice rate", "dhaan price", "paddy today", "rice today"],
+        "response": "📊 Paddy (Rice) — Live Price Info:\nType: 'today price for paddy' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹2,183/quintal (Common) | ₹2,203/quintal (Grade A)\n\n💡 Tips:\n• Sell at PAC government procurement centres for MSP guarantee\n• Dry paddy below 14% moisture before selling\n• Avoid selling right after harvest — prices drop then recover"
+      },
+      {
+        "triggers": ["wheat price", "wheat rate", "gehun price", "gehun bhav", "wheat today"],
+        "response": "📊 Wheat — Live Price Info:\nType: 'today price for wheat' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹2,275/quintal\n\n💡 Tips:\n• Sell through FCI or state procurement for MSP\n• Wheat prices peak in May–June — hold if possible\n• Store in dry gunny bags to maintain quality"
+      },
+      {
+        "triggers": ["cotton price", "cotton rate", "kapas price", "kapas bhav", "cotton today"],
+        "response": "📊 Cotton — Live Price Info:\nType: 'today price for cotton' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25:\n• Medium Staple: ₹7,121/quintal\n• Long Staple: ₹7,521/quintal\n\n💡 Tips:\n• Sell to CCI (Cotton Corporation of India) at MSP\n• Pick cotton in dry weather for better quality grade\n• Avoid mixing different grades — you lose premium price"
+      },
+      {
+        "triggers": ["tomato price", "tomato rate", "tamatar price", "tomato today"],
+        "response": "📊 Tomato — Live Price Info:\nType: 'today price for tomato' to get live mandi price from Agmarknet.\n\n⚠️ Tomato has no MSP — prices fluctuate widely.\n\n💡 Tips:\n• Grade tomatoes (A/B/C) before selling — A grade gives 30% more\n• Sell to hotels and restaurants directly for better price\n• Avoid peak harvest season selling — prices crash\n• Contact APMC mandi for wholesale buyers"
+      },
+      {
+        "triggers": ["onion price", "onion rate", "pyaz price", "pyaz bhav", "onion today"],
+        "response": "📊 Onion — Live Price Info:\nType: 'today price for onion' to get live mandi price from Agmarknet.\n\n⚠️ Onion has no MSP — highly volatile prices.\n\n💡 Tips:\n• Store cured onions — they last 4–6 months\n• Sell in phases rather than all at once\n• NCCF and NAFED buy during price crash for buffer stock\n• Laser Onion app gives regional price forecasts"
+      },
+      {
+        "triggers": ["soybean price", "soybean rate", "soya price", "soybean today", "soya bhav"],
+        "response": "📊 Soybean — Live Price Info:\nType: 'today price for soybean' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹4,892/quintal\n\n💡 Tips:\n• Market prices best in Oct–Dec after harvest season\n• Clean and dry below 12% moisture\n• Sell through NAFED or state procurement for MSP"
+      },
+      {
+        "triggers": ["groundnut price", "groundnut rate", "moongfali price", "groundnut today"],
+        "response": "📊 Groundnut — Live Price Info:\nType: 'today price for groundnut' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹6,783/quintal\n\n💡 Tips:\n• Shell groundnut well before selling for better price\n• Oil mills often pay higher than mandi rates\n• NAFED procurement ensures MSP during price crash"
+      },
+      {
+        "triggers": ["maize price", "maize rate", "makka price", "corn price", "maize today"],
+        "response": "📊 Maize — Live Price Info:\nType: 'today price for maize' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹2,090/quintal\n\n💡 Tips:\n• Poultry feed industry drives maize demand — prices best Apr–Jun\n• Dry maize below 12% moisture before selling\n• Starch factories offer direct purchase at competitive rates"
+      },
+      {
+        "triggers": ["arhar price", "tur price", "toor price", "arhar rate", "arhar today"],
+        "response": "📊 Arhar/Tur Dal — Live Price Info:\nType: 'today price for arhar' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹7,550/quintal\n\n💡 Tips:\n• Dal mills directly purchase — better than open market\n• NAFED and NCCF procurement at MSP available\n• Prices peak in lean season (May–July)"
+      },
+      {
+        "triggers": ["moong price", "moong rate", "green gram price", "moong today", "moong bhav"],
+        "response": "📊 Moong (Green Gram) — Live Price Info:\nType: 'today price for moong' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹8,682/quintal\n\n💡 Tips:\n• Short crop (60 days) — sell quickly after harvest\n• Dal mills pay premium for clean, dry moong\n• Summer moong prices usually higher than Kharif"
+      },
+      {
+        "triggers": ["mustard price", "mustard rate", "sarson price", "sarson bhav", "mustard today"],
+        "response": "📊 Mustard — Live Price Info:\nType: 'today price for mustard' to get live mandi price from Agmarknet.\n\n🏛 MSP 2024–25: ₹5,950/quintal\n\n💡 Tips:\n• Oil mill procurement often above MSP in good years\n• Store in moisture-free conditions to maintain oil content\n• Rajasthan and MP mandis give best prices for mustard"
+      },
+      {
+        "triggers": ["potato price", "potato rate", "aloo price", "aloo bhav", "potato today"],
+        "response": "📊 Potato — Live Price Info:\nType: 'today price for potato' to get live mandi price from Agmarknet.\n\n⚠️ Potato has no MSP — prices highly volatile.\n\n💡 Tips:\n• Cold storage rent costs ₹150–200/quintal/month but triples price\n• Chips and processing companies offer contract farming prices\n• Agra, Allahabad, and Farrukhabad mandis are key price setters"
+      },
+      {
+        "triggers": ["chilli price", "chilli rate", "mirchi price", "mirchi bhav", "chilli today"],
+        "response": "📊 Chilli — Live Price Info:\nType: 'today price for chilli' to get live mandi price from Agmarknet.\n\n⚠️ Chilli has no MSP — prices vary widely by variety.\n\n💡 Tips:\n• Guntur and Khammam mandis are Asia's largest chilli markets\n• Dry chilli fetches 3–4x price of fresh chilli\n• Export demand from USA and Europe drives premium pricing\n• Sort by colour and size for higher grade prices"
+      },
+      {
+        "triggers": ["turmeric price", "turmeric rate", "haldi price", "haldi bhav", "turmeric today"],
+        "response": "📊 Turmeric — Live Price Info:\nType: 'today price for turmeric' to get live mandi price from Agmarknet.\n\n⚠️ Turmeric has no MSP.\n\n💡 Tips:\n• Nizamabad (Telangana) is India's largest turmeric market\n• Finger turmeric fetches 20–30% more than bulb turmeric\n• Export demand from USA, Japan, and Middle East is strong\n• Polished turmeric gets better prices but costs ₹50/qtl extra"
+      },
+      {
+        "triggers": ["msp", "minimum support", "government price", "support price", "all msp", "msp list"],
+        "response": "🏛 MSP (Minimum Support Price) 2024–25 — Full List:\n\n🌾 Cereals:\n• Paddy (Common): ₹2,183/qtl\n• Wheat: ₹2,275/qtl\n• Maize: ₹2,090/qtl\n• Bajra: ₹2,625/qtl\n• Jowar (Hybrid): ₹3,371/qtl\n• Barley: ₹1,735/qtl\n\n🫘 Pulses:\n• Arhar/Tur: ₹7,550/qtl\n• Moong: ₹8,682/qtl\n• Urad: ₹7,400/qtl\n• Chickpea: ₹5,440/qtl\n• Lentil: ₹6,425/qtl\n\n🌻 Oilseeds:\n• Groundnut: ₹6,783/qtl\n• Mustard: ₹5,950/qtl\n• Soybean: ₹4,892/qtl\n• Sunflower: ₹7,280/qtl\n\n🌿 Cash Crops:\n• Cotton (Long): ₹7,521/qtl\n• Sugarcane: ₹340/qtl\n\nMSP is fixed by CACP. Always sell at or above MSP."
+      },
+      {
+        "triggers": ["agmarknet", "mandi rate", "today price", "daily price", "live mandi", "current mandi"],
+        "response": "📊 How to check live daily mandi prices:\n\n🌐 Website: agmarknet.gov.in\n📱 App: Kisan Suvidha (free on Android)\n📱 App: e-NAM (National Agriculture Market)\n📱 App: Fasal (provides crop price alerts)\n📲 SMS: Send crop name to 51969\n☎️ Helpline: 1800-180-1551 (free)\n\n💡 You can also ask me directly:\n'Today price for wheat' or 'Mandi price for tomato'\nand I will fetch the latest price for you!"
+      },
+      {
+        "triggers": ["sell", "where to sell", "how to sell", "best place to sell", "selling"],
+        "response": "🚜 Best ways to sell your produce:\n\n1. 🏪 Local APMC Mandi — most common, transparent auction\n2. 💻 e-NAM Portal (enam.gov.in) — online national market\n3. 🤝 FPO (Farmer Producer Organisation) — collective bargaining\n4. 🏭 Direct to processor/company — contract farming, stable price\n5. 🛒 Direct to consumer — weekly markets, online platforms\n6. 🏛 Government procurement (FCI/NAFED/NCCF) — MSP guaranteed\n\n💡 Joining an FPO typically gives 10–20% better prices than selling alone."
+      },
+      {
+        "triggers": ["storage", "store crop", "warehouse", "how to store", "cold storage"],
+        "response": "🏪 Crop Storage Tips for Better Prices:\n\n• Warehouse Receipt System: Store at WDRA-registered warehouses and get loans against stored produce\n• Cold storage: Potato, onion, tomato — rent ₹150–200/qtl/month but price doubles\n• Grain storage: Keep below 12–14% moisture, use hermetic bags to prevent pest damage\n• Government scheme: PM-AASHA supports price deficiency payments\n• Never sell in distress — wait 4–6 weeks post-harvest for prices to recover"
+      },
+      {
+        "triggers": ["fpo", "farmer producer", "cooperative", "samiti", "group selling"],
+        "response": "🤝 Farmer Producer Organisation (FPO) Benefits:\n\n• Collective selling means more bargaining power — 10–20% better prices\n• Direct access to bulk buyers, exporters, and processors\n• Input procurement at bulk discounts (seeds, fertilizers, pesticides)\n• Access to government schemes and bank credit more easily\n• NABARD supports FPO formation — contact your district agriculture office\n• e-NAM platform allows FPOs to sell directly to buyers across India"
+      },
+      {
+        "triggers": ["export", "export price", "international price", "foreign market"],
+        "response": "🌍 Export Opportunities for Indian Farmers:\n\n• Onion: Major export to Malaysia, Sri Lanka, Bangladesh, UAE\n• Chilli: Large demand from USA, UK, Germany, Japan\n• Turmeric: USA and Japan pay premium for organic turmeric\n• Basmati Rice: Middle East and Europe are large buyers\n• Groundnut: Export to China and Southeast Asia\n\n📋 How to access export prices:\n• APEDA (apeda.gov.in) — Agricultural Export Development\n• Register your FPO with APEDA for direct export access\n• Organic certification increases export price by 30–50%"
+      }
+    ],
+    "responses": [
+      "💰 To get today's live mandi price, type: 'today price for [crop name]' — example: 'today price for paddy'\n\nI will fetch the latest Agmarknet price for you instantly!",
+      "📊 Ask me the price of any crop: paddy, wheat, cotton, tomato, onion, soybean, groundnut, maize, arhar, moong, mustard, chilli, turmeric and more!",
+      "🚜 For the best selling price: check live mandi rates, know your MSP, and consider joining an FPO for collective bargaining power.",
+      "💡 Store your produce if prices are low at harvest — they usually recover within 4–8 weeks. Use the Warehouse Receipt System for loans against stored produce."
+    ]
+  },
+
+  "pest": {
+    "keywords": ["pest", "insect", "disease", "leaves", "yellow", "spray", "fungus", "worm", "bug", "attack", "damage", "rot", "wilt", "blight", "caterpillar", "aphid", "whitefly", "rust", "mite", "nematode", "virus", "bacteria", "stem", "root", "fruit", "borer", "weevil"],
+    "rules": [
+      {
+        "triggers": ["yellow leaves", "yellowing", "yellow", "leaves turning"],
+        "response": "🍂 Yellow leaves can indicate several issues:\n\n1. Nitrogen deficiency — apply urea (46% N) at 20kg/acre\n2. Waterlogging — improve drainage immediately\n3. Iron deficiency — spray ferrous sulphate 0.5%\n4. Yellow mosaic virus — remove and destroy infected plants\n5. Root rot fungus — apply Trichoderma to soil\n\nCheck: is yellowing starting from older leaves (bottom) = nutrient deficiency. Starting from new leaves (top) = may be viral/fungal."
+      },
+      {
+        "triggers": ["wilt", "wilting", "drooping", "dying"],
+        "response": "🥀 Wilting crops — possible causes:\n\n1. Fusarium wilt (fungal) — soil-borne, no cure once infected. Remove plant. Treat soil with Carbendazim.\n2. Water stress — check soil moisture, irrigate if dry\n3. Root knot nematode — apply Carbofuran granules to soil\n4. Bacterial wilt — infected plants ooze milky liquid when stem cut. Remove and destroy.\n\nPrevention: Use resistant varieties, treat seeds before sowing."
+      },
+      {
+        "triggers": ["aphid", "aphids", "small insects", "sticky leaves"],
+        "response": "🐜 Aphid control:\n\n• Organic: Spray neem oil (5ml/litre) + few drops of soap\n• Chemical: Imidacloprid 0.5ml/litre or Dimethoate 2ml/litre\n• Spray in early morning or evening — never in afternoon heat\n• Natural predators: ladybird beetles eat aphids — avoid broad-spectrum pesticides\n• Yellow sticky traps help monitor aphid levels\n• Repeat spray after 7–10 days if infestation continues"
+      },
+      {
+        "triggers": ["whitefly", "white fly", "white insects"],
+        "response": "🦟 Whitefly control (major virus vector):\n\n• Remove heavily infested leaves and destroy them\n• Yellow sticky traps at 10/acre help trap adults\n• Spray: Thiamethoxam 0.3g/litre or Spiromesifen 1ml/litre\n• Alternate sprays to prevent resistance\n• Whiteflies spread leaf curl virus — act early!\n• Avoid planting cotton near tomato/chilli — cross-infestation risk"
+      },
+      {
+        "triggers": ["borer", "stem borer", "fruit borer", "shoot borer"],
+        "response": "🐛 Borer management:\n\n• For stem borer: Apply Chlorpyriphos 2.5ml/litre at base of plant\n• For fruit borer: Spray Spinosad 0.5ml/litre or Emamectin 0.5g/litre\n• Remove and destroy infested stems/fruits\n• Pheromone traps (5/acre) to monitor and trap adult moths\n• For paddy stem borer: Cartap hydrochloride granules in leaf whorl\n• Intercrop with coriander or marigold to repel borers naturally"
+      },
+      {
+        "triggers": ["fungus", "fungal", "blight", "rot", "mold", "mould", "spots", "brown spots", "rust"],
+        "response": "🍄 Fungal disease management:\n\n• Early blight/Late blight: Spray Mancozeb 2.5g/litre or Chlorothalonil 2g/litre\n• Powdery mildew (white powder on leaves): Spray Sulphur 3g/litre\n• Downy mildew: Spray Metalaxyl + Mancozeb 2.5g/litre\n• Rust (orange/red pustules): Spray Propiconazole 1ml/litre\n• Root rot: Drench soil with Trichoderma viride 5g/litre\n\nAlways spray in the evening. Repeat every 10–14 days."
+      },
+      {
+        "triggers": ["neem", "organic", "natural", "chemical free", "pesticide free"],
+        "response": "🌿 Organic/natural pest control methods:\n\n• Neem oil spray: 5ml neem oil + 2ml soap/litre water — effective against most soft insects\n• Neem seed kernel extract (NSKE) 5% — very effective, cheap\n• Garlic-chilli spray: Blend 100g garlic + 10 chillies in 1L water, dilute 1:10\n• Sticky yellow traps for whitefly, aphids, thrips\n• Trichoderma (bio-fungicide) for soil fungal diseases\n• Beauveria bassiana spray for caterpillars and beetles\n• Intercropping with marigold repels nematodes"
+      },
+      {
+        "triggers": ["spray", "spraying", "pesticide", "when to spray", "how to spray"],
+        "response": "💦 Spraying best practices:\n\n• Best time: Early morning (6–9 AM) or evening (5–7 PM)\n• Never spray in strong wind or before expected rain\n• Wear gloves, mask, and full-sleeved clothes while spraying\n• Do not eat, drink, or smoke while spraying\n• Clean sprayer thoroughly after use\n• Alternate chemicals each spray to prevent pest resistance\n• Observe waiting period before harvesting after spray\n• Keep children and animals away from sprayed area for 24 hours"
+      }
+    ],
+    "responses": [
+      "🐛 To help you better, can you describe the symptoms?\n\n• Are leaves turning yellow or brown?\n• Are there spots, holes, or powder on leaves?\n• Is the plant wilting or drooping?\n• Are there visible insects on the plant?\n\nDescribe what you see and I will give specific advice!",
+      "🌿 Common pest issues I can help with:\n\n1. Yellow/brown leaves → nutrient or fungal issue\n2. Wilting plant → wilt disease or water stress\n3. Holes in leaves → caterpillar or beetle attack\n4. Sticky leaves → aphid infestation\n5. White powder on leaves → powdery mildew\n\nWhich symptom matches your crop?",
+      "⚠️ For accurate pest diagnosis always check:\n\n• Which part is affected — leaves, stem, root, or fruit?\n• When did symptoms first appear?\n• What crop is it and how old is it?\n\nShare these details for better advice!"
+    ]
+  },
+
+  "greeting": {
+    "keywords": ["hello", "hi", "hey", "namaste", "help", "start", "good morning", "good evening", "good afternoon", "who are you", "what can you do"],
+    "rules": [
+      {
+        "triggers": ["who are you", "what are you", "about you"],
+        "response": "🌾 I am your Farmer Assistant Chatbot! I can help you with:\n\n🌦 Weather advice — rain, drought, frost tips\n🌱 Crop guidance — sowing, irrigation, harvest\n💰 Market prices — live mandi rates, MSP, where to sell\n🐛 Pest control — identification and treatment\n\nJust type your question or click the quick buttons below!"
+      },
+      {
+        "triggers": ["what can you do", "how can you help", "features"],
+        "response": "🤖 Here is what I can help with:\n\n1. 🌦 Weather tips for farming decisions\n2. 🌱 Crop advice for 10+ crops (paddy, wheat, cotton, tomato...)\n3. 💰 Live mandi prices + MSP rates for 20+ crops\n4. 🐛 Pest and disease identification and treatment\n5. 🌿 Organic farming and soil health tips\n\nFor live price: type 'today price for wheat' or any crop name!"
+      },
+      {
+        "triggers": ["good morning", "good evening", "good afternoon"],
+        "response": "🌅 Good day, Farmer! Hope your crops are doing well today. 🌾\n\nHow can I assist you? Ask me about weather, crops, market prices, or pest control."
+      }
+    ],
+    "responses": [
+      "👋 Hello Farmer! I can help with weather, crop advice, live market prices, and pest control. What do you need?",
+      "🌾 Namaste! How can I assist you with your farm today?",
+      "😊 Hello! Ask me anything about farming — I am here to help!"
+    ]
+  },
+
+  "fallback": [
+    "🤔 I didn't quite understand that. Try asking about weather, crops, market prices, or pest control.",
+    "❓ Could you rephrase that? For example: 'Today price for paddy' or 'My tomato leaves have brown spots.'",
+    "🌾 I can help with: weather tips, crop advice, live mandi prices, or pest control. What would you like to know?",
+    "💡 Try asking: 'Today price for wheat', 'How do I control aphids on cotton?', or 'What is the MSP for paddy?'"
+  ],
+
+  "wizard": {
+    "start": "🌱 Let me help you find the best crop!\n\nQuestion 1 of 3:\n💧 What is your water availability?\n\nReply with:\n1 — Good irrigation (bore well / canal)\n2 — Only rainwater (no irrigation)\n3 — Limited water (occasional irrigation)",
+    "water": { "1": "irrigated", "2": "rainfed", "3": "limited" },
+    "q2": "Question 2 of 3:\n🗓 Which season are you planting in?\n\nReply with:\n1 — Kharif (June – October, monsoon)\n2 — Rabi (November – March, winter)\n3 — Summer (March – May)",
+    "season": { "1": "kharif", "2": "rabi", "3": "summer" },
+    "q3": "Question 3 of 3:\n🎯 What is your main goal?\n\nReply with:\n1 — Maximum profit (cash crop)\n2 — Food for family + some selling\n3 — Safe crop with less risk",
+    "recommendations": {
+      "irrigated_kharif_1": "🏆 Best crops for you:\n\n1. 🌾 Paddy (Rice) — High demand, good MSP ₹2,183/qtl\n2. 🌿 Cotton — Best profit, MSP ₹7,521/qtl\n3. 🌽 Maize — Fast growing, good market\n\n💡 Top pick: Cotton for maximum profit in irrigated Kharif.",
+      "irrigated_kharif_2": "🏆 Best crops for you:\n\n1. 🌾 Paddy — Staple crop, easy to sell\n2. 🫘 Soybean — Low maintenance, good price\n3. 🌽 Maize — Good for family + selling\n\n💡 Top pick: Paddy — reliable and good MSP support.",
+      "irrigated_kharif_3": "🏆 Best crops for you:\n\n1. 🌾 Paddy — Stable MSP, low risk\n2. 🫘 Soybean — Drought tolerant, safe\n3. 🌱 Moong (Green gram) — Short duration, less risk\n\n💡 Top pick: Paddy — safest irrigated Kharif crop.",
+      "irrigated_rabi_1": "🏆 Best crops for you:\n\n1. 🌾 Wheat — Highest MSP ₹2,275/qtl, great demand\n2. 🧅 Onion — High profit potential\n3. 🍅 Tomato — Good returns with irrigation\n\n💡 Top pick: Wheat — most profitable irrigated Rabi crop.",
+      "irrigated_rabi_2": "🏆 Best crops for you:\n\n1. 🌾 Wheat — Reliable staple crop\n2. 🥔 Potato — Good for family consumption + selling\n3. 🌿 Mustard — Low cost, good oil demand\n\n💡 Top pick: Wheat + Mustard intercropping for best results.",
+      "irrigated_rabi_3": "🏆 Best crops for you:\n\n1. 🌾 Wheat — Safe, government MSP guaranteed\n2. 🫘 Chickpea — Low water, drought safe\n3. 🌿 Mustard — Very low risk Rabi crop\n\n💡 Top pick: Wheat — safest Rabi choice with MSP backing.",
+      "irrigated_summer_1": "🏆 Best crops for you:\n\n1. 🍅 Tomato — Premium summer prices\n2. 🌶 Chilli — High value, good export demand\n3. 🥒 Cucumber — Fast crop, 45 days harvest\n\n💡 Top pick: Tomato or Chilli for maximum summer profit.",
+      "irrigated_summer_2": "🏆 Best crops for you:\n\n1. 🌽 Maize — Good for family + cattle feed\n2. 🥒 Vegetables — Spinach, okra for daily income\n3. 🌻 Sunflower — Reliable oilseed crop\n\n💡 Top pick: Vegetables give daily income in summer.",
+      "irrigated_summer_3": "🏆 Best crops for you:\n\n1. 🌻 Sunflower — Low risk, good MSP\n2. 🌽 Maize — Stable demand, easy crop\n3. 🥒 Okra (Bhindi) — Short duration, safe\n\n💡 Top pick: Sunflower — safest summer crop option.",
+      "rainfed_kharif_1": "🏆 Best crops for you:\n\n1. 🌿 Cotton — Good profit even in rainfed conditions\n2. 🫘 Soybean — Excellent for rainfed Kharif\n3. 🌾 Bajra (Pearl millet) — High yield, drought tolerant\n\n💡 Top pick: Soybean — best rainfed Kharif profit crop.",
+      "rainfed_kharif_2": "🏆 Best crops for you:\n\n1. 🌾 Jowar (Sorghum) — Drought tolerant, food + fodder\n2. 🫘 Arhar (Tur dal) — Long duration, good price\n3. 🌱 Moong — Short duration, fits in between\n\n💡 Top pick: Jowar + Arhar intercropping for rainfed areas.",
+      "rainfed_kharif_3": "🏆 Best crops for you:\n\n1. 🌾 Bajra — Most drought resistant cereal\n2. 🫘 Moong — Short duration, low risk\n3. 🌾 Jowar — Very reliable rainfed crop\n\n💡 Top pick: Bajra — safest rainfed Kharif option.",
+      "rainfed_rabi_1": "🏆 Best crops for you:\n\n1. 🌿 Mustard — Good profit in rainfed Rabi\n2. 🫘 Chickpea — Excellent rainfed legume\n3. 🌾 Barley — Hardy crop, good demand\n\n💡 Top pick: Mustard — best rainfed Rabi profit crop.",
+      "rainfed_rabi_2": "🏆 Best crops for you:\n\n1. 🫘 Chickpea — Staple dal, good price\n2. 🌿 Mustard — Family oil needs + selling\n3. 🌾 Barley — For family consumption\n\n💡 Top pick: Chickpea — reliable rainfed Rabi food crop.",
+      "rainfed_rabi_3": "🏆 Best crops for you:\n\n1. 🫘 Chickpea — Very drought tolerant, safe\n2. 🌿 Mustard — Low input, low risk\n3. 🌾 Barley — Hardiest Rabi cereal\n\n💡 Top pick: Chickpea — safest rainfed Rabi crop.",
+      "rainfed_summer_1": "🏆 Best crops for you:\n\n1. 🌻 Sunflower — Manages well with limited water\n2. 🌾 Bajra — Very low water requirement\n3. 🥒 Okra — Short duration, less water\n\n💡 Top pick: Sunflower — best rainfed summer profit crop.",
+      "rainfed_summer_2": "🏆 Best crops for you:\n\n1. 🌾 Jowar — Good with minimal water\n2. 🥒 Okra — Family vegetable + some selling\n3. 🌻 Sunflower — Oilseed for family use\n\n💡 Top pick: Jowar — reliable rainfed summer food crop.",
+      "rainfed_summer_3": "🏆 Best crops for you:\n\n1. 🌾 Bajra — Most water efficient crop\n2. 🌻 Sunflower — Very safe summer crop\n3. 🥒 Okra — Short duration, easy to grow\n\n💡 Top pick: Bajra — safest rainfed summer option.",
+      "limited_kharif_1": "🏆 Best crops for you:\n\n1. 🫘 Soybean — Manages well with limited water\n2. 🌾 Bajra — Very low water requirement\n3. 🌱 Moong — Short duration, less water needed\n\n💡 Top pick: Soybean — best profit with limited water.",
+      "limited_kharif_2": "🏆 Best crops for you:\n\n1. 🌾 Jowar — Excellent with limited water\n2. 🫘 Moong — Very short duration\n3. 🌾 Bajra — Extremely water efficient\n\n💡 Top pick: Jowar — perfect limited water food crop.",
+      "limited_kharif_3": "🏆 Best crops for you:\n\n1. 🌾 Bajra — Most water efficient crop\n2. 🫘 Moong — Safe, short 60 day crop\n3. 🌾 Jowar — Reliable with minimal water\n\n💡 Top pick: Bajra — safest crop for limited water.",
+      "limited_rabi_1": "🏆 Best crops for you:\n\n1. 🌿 Mustard — Excellent with limited water\n2. 🫘 Chickpea — Low water requirement\n3. 🌾 Barley — Most water efficient Rabi crop\n\n💡 Top pick: Mustard — best profit with limited Rabi water.",
+      "limited_rabi_2": "🏆 Best crops for you:\n\n1. 🫘 Chickpea — Family protein needs\n2. 🌿 Mustard — For cooking oil\n3. 🌾 Barley — Animal feed + family use\n\n💡 Top pick: Chickpea + Mustard for balanced family needs.",
+      "limited_rabi_3": "🏆 Best crops for you:\n\n1. 🫘 Chickpea — Safest limited water Rabi crop\n2. 🌿 Mustard — Very low risk\n3. 🌾 Barley — Hardy and reliable\n\n💡 Top pick: Chickpea — lowest risk limited water crop.",
+      "limited_summer_1": "🏆 Best crops for you:\n\n1. 🌻 Sunflower — Manages with limited irrigation\n2. 🌽 Maize — Can manage with 3–4 irrigations\n3. 🥒 Okra — Short duration, low water\n\n💡 Top pick: Sunflower — best summer profit with limited water.",
+      "limited_summer_2": "🏆 Best crops for you:\n\n1. 🥒 Okra (Bhindi) — Family vegetable + selling\n2. 🌻 Sunflower — Oilseed for family use\n3. 🌽 Maize — Cattle feed + family food\n\n💡 Top pick: Okra — great family + income crop.",
+      "limited_summer_3": "🏆 Best crops for you:\n\n1. 🌻 Sunflower — Very safe summer crop\n2. 🥒 Okra — Short duration, easy to grow\n3. 🌽 Maize — Reliable with minimal water\n\n💡 Top pick: Sunflower — safest limited water summer crop."
+    }
+  }
+}
